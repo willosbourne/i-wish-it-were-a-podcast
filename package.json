@@ -1,5 +1,5 @@
 {
-  "name": "~TODO~",
+  "name": "i-wish-it-were-a-podcast",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
@@ -25,5 +25,6 @@
     "tslib": "^2.0.0",
     "typescript": "^4.0.0"
   },
-  "type": "module"
+  "type": "module",
+  "license": "mit"
 }
