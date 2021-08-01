@@ -16,7 +16,9 @@
 	<h2>I Wish It Were A Podcast</h2>
 	{#if appUser.name}
 		<p>Welcome, {appUser.name}</p>
+		<p>Add a YouTube Link below to send it to your podcast feed.</p>
+		<Upload />
 	{/if}
-	<p>Add a YouTube Link below to send it to your podcast feed.</p>
-	<Upload />
+	<p>You'll need to <a href="/login">log in</a> to use this app.</p>
+	<p>Without logging in, you won't have your own personal podcast feed.</p>
 </div>

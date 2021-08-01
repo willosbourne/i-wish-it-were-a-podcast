@@ -5,8 +5,7 @@
 
 <section>
 	<h1>Login</h1>
-	<p>Coming Soon (tm)</p>
 	<a href="/api/auth/signin/google">
-		<span>sign in with google</span>
+		<span>Sign In with Google</span>
 	</a>
 </section>
