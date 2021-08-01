@@ -1,9 +1,21 @@
 <script>
 	let user = {
 		email: 'will@sht.dev',
-		loggedIn: true,
-	}
+		loggedIn: true
+	};
 </script>
+
+<div class="header">
+	<nav>
+		<a href=".">Home</a>
+		<a href="about">About</a>
+		<a href="login">Login</a>
+	</nav>
+</div>
+
+<div class="body">
+	<slot />
+</div>
 
 <style>
 	.header {
@@ -19,15 +31,3 @@
 		padding: 2em;
 	}
 </style>
-
-<div class="header">
-	<nav>
-		<a href=".">Home</a>
-		<a href="about">About</a>
-		<a href="login">Login</a>
-	</nav>
-</div>
-
-<div class="body">
-	<slot></slot>
-</div>
