@@ -7,7 +7,9 @@
 	import Upload from '../components/upload.svelte';
 </script>
 
-<h1>IWIWAP</h1>
-<h2>I Wish It Were A Podcast</h2>
-<p>Add a YouTube Link below to send it to your podcast feed.</p>
-<Upload />
+<div>
+	<h1>IWIWAP</h1>
+	<h2>I Wish It Were A Podcast</h2>
+	<p>Add a YouTube Link below to send it to your podcast feed.</p>
+	<Upload />
+</div>

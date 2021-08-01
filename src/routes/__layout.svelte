@@ -1,26 +1,33 @@
 <script>
-import Index from "./index.svelte";
-
 	let user = {
 		email: 'will@sht.dev',
 		loggedIn: true,
 	}
-
-	function toggleAuth() {
-		user.loggedIn = !user.loggedIn;
-	}
 </script>
 
-<nav>
-	<a href=".">Home</a>
-	<a href="about">About</a>
-	<button on:click={toggleAuth}>
-		{#if user.loggedIn}
-			Log Out
-		{:else}
-			Log In
-		{/if}
-	</button>
-</nav>
+<style>
+	.header {
+		border-bottom: 1px solid black;
+		margin-bottom: 1em;
+	}
 
-<slot></slot>
+	.body {
+		border: 1px solid black;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		padding: 2em;
+	}
+</style>
+
+<div class="header">
+	<nav>
+		<a href=".">Home</a>
+		<a href="about">About</a>
+		<a href="login">Login</a>
+	</nav>
+</div>
+
+<div class="body">
+	<slot></slot>
+</div>
