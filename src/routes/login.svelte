@@ -3,5 +3,9 @@
 	<title>IWIWAP - Login</title>
 </svelte:head>
 
-<h1>Login</h1>
-<p>Coming Soon (tm)</p>
+<section>
+	<h1>Login</h1>
+	<a href="/api/auth/signin/google">
+		<span>Sign In with Google</span>
+	</a>
+</section>

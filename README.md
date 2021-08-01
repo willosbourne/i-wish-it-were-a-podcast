@@ -3,14 +3,15 @@
 Want video essays & such on the go & don't want to pay for YouTube Premium? Make it a podcast!
 
 ## Goals of this Project
+
 - Learn Svelte a bit
 - Enjoy coding again
 - Complete the process
-    - Log in with basic authentication
-    - Input a YouTube link
-    - Convert YouTube link to audio only file
-    - Add audio file to custom RSS feed 
-    - Give user access to add custom RSS feed to their podcast player
+  - Log in with basic authentication
+  - Input a YouTube link
+  - Convert YouTube link to audio only file
+  - Add audio file to custom RSS feed
+  - Give user access to add custom RSS feed to their podcast player
 
 <details>
     <summary>Starter Svelte Info</summary>
@@ -53,4 +54,5 @@ Want video essays & such on the go & don't want to pay for YouTube Premium? Make
     ```
 
     > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
 </details>
