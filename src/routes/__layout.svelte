@@ -1,29 +1,53 @@
-<script>
-	let user = {
-		email: 'will@sht.dev',
-		loggedIn: true
+<script lang="ts">
+	import { session } from '$app/stores';
+	import { user } from '../lib/stores/appStore';
+	let googleUser = null as GoogleUser;
+	if ($session.user) {
+		googleUser = $session.user.connections.google as GoogleUser;
+	}
+	let tempUserObj = {
+		loggedIn: false,
+		name: '',
+		email: '',
+		info: null as GoogleUser
 	};
+
+	if (googleUser) {
+		tempUserObj.loggedIn = true;
+		tempUserObj.name = googleUser.name;
+		tempUserObj.email = googleUser.email;
+		tempUserObj.info = googleUser;
+	}
+
+	user.set(tempUserObj);
+
+	let appUser = null as User;
+	user.subscribe(u => appUser = u);
 </script>
 
-<div class="header">
+<header class="header">
 	<nav>
 		<a href=".">Home</a>
 		<a href="about">About</a>
-		<a href="login">Login</a>
+		{#if appUser && appUser.loggedIn}
+			<a href="profile">Profile</a>
+		{:else}
+			<a href="login">Login</a>
+		{/if}
 	</nav>
-</div>
+</header>
 
-<div class="body">
+<main class="body">
 	<slot />
-</div>
+</main>
 
 <style>
-	.header {
+	header {
 		border-bottom: 1px solid black;
 		margin-bottom: 1em;
 	}
 
-	.body {
+	main {
 		border: 1px solid black;
 		display: flex;
 		justify-content: center;

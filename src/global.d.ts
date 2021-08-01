@@ -14,3 +14,25 @@ interface ImportMetaEnv {
 	VITE_REDDIT_API_SECRET: string;
 	VITE_JWT_SECRET_KEY: string;
 }
+
+interface User {
+	loggedIn: boolean;
+	name: string;
+	email: string;
+	info: GoogleUser;
+}
+
+// sk-auth Google user definition
+interface GoogleUser {
+	sub: string;
+	name: string;
+	given_name: string;
+	family_name: string;
+	profile: string;
+	picture: string;
+	email: string;
+	email_verified: boolean;
+	gender: string;
+	locale: string;
+	hd: string;
+}
